@@ -1,5 +1,8 @@
 package com.formTest.SubmitForm.entities;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Passangers {
 	
 	String name;

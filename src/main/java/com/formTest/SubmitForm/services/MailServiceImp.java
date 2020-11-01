@@ -21,7 +21,6 @@ import com.formTest.SubmitForm.entities.Email;
  *
  */
 @Service
-@Configurable
 public class MailServiceImp implements MailService
 {
 	   private JavaMailSender javaMailSender;

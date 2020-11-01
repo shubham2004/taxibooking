@@ -79,19 +79,19 @@ cursor: pointer;
 
 <p>
 <label>Name
-<input type="text" name="customer_name" required>
+<input type="text" name="customer_name" required value=${name} }>
 </label> 
 </p>
 
 <p>
 <label>Phone 
-<input type="tel" name="phone_number">
+<input type="tel" name="phone_number" value=${mnumber}>
 </label>
 </p>
 
 <p>
 <label>Email 
-<input type="email" name="email_address">
+<input type="email" name="email_address" value=${email}>
 </label>
 </p>
 

@@ -24,7 +24,13 @@
 	<div class ="msg">
 		Thankyou for choosing us ${name} <br>
 		your request for ${taxt} on ${date} <br>
-		has been confirmed. 
+		has been confirmed.<br>
+		Please go to the dash board and check your booking.<br><br>
+		<form action="backToDashBoard" method="post">
+			 <input type="submit" class="button" value="Go Back To Dash Board">
+		</form>
+   
 	</div>
+  
 </body>
 </html>

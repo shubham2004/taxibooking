@@ -18,7 +18,7 @@ public class FBInitialize
 	{  
 		try 
 		{  
-			FileInputStream serviceAccount =  new FileInputStream("C:\\Users\\Dell\\Documents\\workspace-spring-tool-suite-4-4.8.0.RELEASE\\SubmitForm\\src\\main\\java\\com\\formTest\\SubmitForm\\dao\\serviceaccount.json"); 
+			FileInputStream serviceAccount =  new FileInputStream("serviceaccount.json"); 
 			
 			FirebaseOptions options = new FirebaseOptions.Builder()  
 			.setCredentials(GoogleCredentials.fromStream(serviceAccount))  
