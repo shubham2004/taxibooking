@@ -18,13 +18,15 @@ public class FBInitialize
 	{  
 		try 
 		{  
-			FileInputStream serviceAccount =  new FileInputStream("serviceaccount.json"); 
-			
-			FirebaseOptions options = new FirebaseOptions.Builder()  
-			.setCredentials(GoogleCredentials.fromStream(serviceAccount))  
-			.setDatabaseUrl("https://fir-8a65a.firebaseio.com")  
-			.build();  
-			FirebaseApp.initializeApp(options);  
+			FileInputStream serviceAccount =
+					  new FileInputStream("\serviceaccount.json");
+
+					FirebaseOptions options = new FirebaseOptions.Builder()
+					  .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+					  .setDatabaseUrl("https://fir-8a65a.firebaseio.com")
+					  .build();
+
+					FirebaseApp.initializeApp(options);
 			
 			
 		} 
