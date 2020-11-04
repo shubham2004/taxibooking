@@ -1,8 +1,9 @@
 package com.formTest.SubmitForm.dao;
 
 import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 import java.util.*;
-
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.config.Task;
 import org.springframework.stereotype.Component;
@@ -11,7 +12,6 @@ import com.formTest.SubmitForm.entities.Booking;
 import com.formTest.SubmitForm.entities.Passangers;
 import com.formTest.SubmitForm.entities.SessionEntities;
 import com.google.api.core.ApiFuture;
-import com.google.api.services.storage.Storage.BucketAccessControls.List;
 import com.google.cloud.firestore.CollectionReference;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
@@ -63,9 +63,37 @@ public class BookingDaoImp implements BookingDao
 	        ApiFuture<WriteResult> writeResult = dbFirestore.collection(COL_NAME).document(bookingId).delete();
 	        return "Document with Passangers ID "+bookingId+" has been deleted";
 	    }
-	    public ArrayList<String> getAllBooking()
+	    
+	    
+	    public ArrayList<Booking> getAllBooking()
 	    {
-	    	return new ArrayList<String>();
+	    	Firestore db = FirestoreClient.getFirestore();
+	    	ApiFuture<QuerySnapshot> future = db.collection("booking").get();
+	    	ArrayList<Booking> bookingList = new ArrayList<Booking>();
+	    	List<QueryDocumentSnapshot> documents;
+			try 
+			{
+				documents = future.get().getDocuments();
+				
+//				bookingList=documents.stream().filter(doc -> doc.getId().equals(sessionEntities.getPassanger().getPassangerId())).collect(Collectors.toList());;
+//				
+				for (QueryDocumentSnapshot document : documents) 
+				{
+						//if(document.toObject(Booking.class).getBookingId()==sessionEntities.getPassanger().getPassangerId())
+						{
+							bookingList.add(document.toObject(Booking.class));
+						}
+			    }
+				return bookingList;
+			} 
+			catch (InterruptedException | ExecutionException e) 
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	
+
+	    	return bookingList;
 	    }
 	    
 }

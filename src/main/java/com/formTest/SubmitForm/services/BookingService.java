@@ -11,5 +11,5 @@ public interface BookingService
 	public Booking getBookingService(String name) throws InterruptedException, ExecutionException;
 	 public String updateBookingService(Booking booking) throws InterruptedException, ExecutionException;
 	 public String deleteBookingService(String bookingId);
-	 public ArrayList<String> getAllBooking();
+	 public ArrayList<Booking> getAllBooking();
 }

@@ -10,5 +10,5 @@ public interface BookingDao {
 	public Booking getBooking(String name) throws InterruptedException, ExecutionException;
 	 public String updateBooking(Booking booking) throws InterruptedException, ExecutionException;
 	 public String deleteBooking(String bookingId);
-	 public ArrayList<String> getAllBooking();
+	 public ArrayList<Booking> getAllBooking();
 }

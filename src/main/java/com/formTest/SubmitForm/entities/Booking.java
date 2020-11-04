@@ -11,6 +11,19 @@ public class Booking {
 	String dropOff;
 	String comments;
 	String bookingId;
+	String passsangerId;
+	public String getCustName() {
+		return custName;
+	}
+	public void setCustName(String custName) {
+		this.custName = custName;
+	}
+	public String getPasssangerId() {
+		return passsangerId;
+	}
+	public void setPasssangerId(String passsangerId) {
+		this.passsangerId = passsangerId;
+	}
 	public String getBookingId() {
 		return bookingId;
 	}
@@ -73,9 +86,11 @@ public class Booking {
 	}
 	@Override
 	public String toString() {
-		return "Booking [name=" + custName + ", phone=" + phone + ", email=" + email + ", taxi=" + taxi + ", extras="
-				+ extras + ", pickupDate=" + pickupDate + ", pickupPlace=" + pickupPlace + ", dropOff=" + dropOff
-				+ ", comments=" + comments + ", bookingId=" + bookingId + "]";
+		return "Booking [custName=" + custName + ", phone=" + phone + ", email=" + email + ", taxi=" + taxi
+				+ ", extras=" + extras + ", pickupDate=" + pickupDate + ", pickupPlace=" + pickupPlace + ", dropOff="
+				+ dropOff + ", comments=" + comments + ", bookingId=" + bookingId + ", passsangerId=" + passsangerId
+				+ "]";
 	}
+	
 	
 }

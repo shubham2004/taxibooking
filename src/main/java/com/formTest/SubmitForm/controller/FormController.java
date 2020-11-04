@@ -1,5 +1,6 @@
 package com.formTest.SubmitForm.controller;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ExecutionException;
 
@@ -8,10 +9,13 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.formTest.SubmitForm.entities.Booking;
 import com.formTest.SubmitForm.entities.Email;
@@ -40,6 +44,7 @@ public class FormController {
 		System.out.println("Home page is requested");
 		HttpSession session=req.getSession();
 		session.setAttribute("msg","");
+		
 		return "login.jsp";
 	}
 	
@@ -163,6 +168,7 @@ public class FormController {
 		booking.setDropOff(dropOff);
 		booking.setComments(comments);
 		booking.setBookingId(bookingId);
+		booking.setPasssangerId(sessionEntities.getPassanger().getPassangerId());
 		try {
 			bookingService.saveBookingService(booking);
 		} catch (InterruptedException | ExecutionException e) {
@@ -184,6 +190,18 @@ public class FormController {
 		HttpSession session=req.getSession();
 		session.setAttribute("passanger",sessionEntities.getPassanger().getName());
 		return "dashboard.jsp";
+	}
+	
+	@GetMapping("bookingHistory")
+	public ModelAndView getCustomerBooking()
+	{
+		
+		ArrayList<Booking> list = bookingService.getAllBooking();
+        //return back to index.jsp
+        ModelAndView model = new ModelAndView("BookingHistory.jsp");
+        model.addObject("lists", list);
+
+        return model;
 	}
 	
 }
