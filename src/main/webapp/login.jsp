@@ -225,6 +225,7 @@ font: 16px/26px "Raleway", sans-serif;
 
             <div class="tabs-content">
                 <div id="signup-tab-content" class="active">
+                <p style="text-align:center;"> ${msg} </p>
                     <form class="signup-form" action="addCust" method="post">
                         <input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email"
                             name="email">
@@ -236,10 +237,6 @@ font: 16px/26px "Raleway", sans-serif;
                             name="mnumber">
                         <input type="submit" class="button" value="Sign Up">
                 
-                    
-                        <!-- <p>
-                            ${msg}
-                        </p> -->
                         <div class="social1">
                             <a href="http://www.facebook.com"><img
                                 src="https://hrcdn.net/community-frontend/assets/facebook-colored-af4249157d.svg"></a>
@@ -260,6 +257,7 @@ font: 16px/26px "Raleway", sans-serif;
                 <!--.signup-tab-content-->
 
                 <div id="login-tab-content">
+                 <p style="text-align:center;"> ${msg} </p> 
                     <form class="login-form" action="logincust" method="post">
                         <input type="text" class="input" id="user_login" autocomplete="off" placeholder="Email ID"
                             name="email">
@@ -269,9 +267,7 @@ font: 16px/26px "Raleway", sans-serif;
                         <label for="remember_me">Remember me</label>
                         <input type="submit" class="button" value="Login">
                
-                        <!-- <p>
-                            ${msg}
-                        </p> -->
+                        
                     </form>
                     <div class="social1">
                         <a href="http://www.facebook.com"><img

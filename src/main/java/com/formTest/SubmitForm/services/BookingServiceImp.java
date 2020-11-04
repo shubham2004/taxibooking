@@ -47,6 +47,7 @@ public class BookingServiceImp implements BookingService
 				 finalList.add(booking);
 			 }
 		 }
+		 System.out.println(finalList);
 		 return finalList;
 	 }
 }

@@ -110,7 +110,6 @@ public class FormController {
 			{
 				HttpSession session=req.getSession();
 				session.setAttribute("msg","email or password is wrong, please try again!");
-				
 				return "login.jsp";
 				
 			}
