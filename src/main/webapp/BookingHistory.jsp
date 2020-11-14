@@ -7,6 +7,8 @@
 <head>
     <link rel="icon"
         href="https://st.depositphotos.com/1005920/1832/i/950/depositphotos_18322691-stock-photo-taxi-green-glossy-icon-on.jpg">
+    <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+	    		rel="stylesheet">
     <style>
         h1{
             color: #82f090;
@@ -19,47 +21,30 @@
             
         }
         table {
-            width: 500px;
-            text-align: center;
             background-color: white;
-            margin-top: 10px;
-            margin-left: 497px;
             box-shadow: 1px 1px 10px 0.1px black;
-            border-radius: 5px;
+            border-radius: 10px;
+            text-align: center;
         }
-
-        form {
-            margin-top: 20px;
-            margin-left: 675px;
-
-        }
-
-        form .button {
-            padding: 1em;
-            border-radius: 0.5em;
-            background: #eee;
-            border: none;
-            font-weight: bold;
-            margin-top: 1em;
-            background-color: #82f090;
-            
-        }
-
-        form .button:hover {
-            background-color: #0ae227;
-        }
+		.table-head {
+			background-color: #808080;
+			color: white;
+			text-align: center;
+		}
+       
     </style>
 </head>
 
 <body>
+<div class="container">
     <h1>Booking History</h1>
 
-    <table border="1">
-        <tr>
-            <th>Pickup Date</th>
-            <th>Pickup Place</th>
-            <th>Drop Off</th>
-            <th>Taxi Type</th>
+    <table class="table table-striped table-bordered">
+        <tr >
+            <th class="table-head">Pickup Date</th>
+            <th class="table-head">Pickup Place</th>
+            <th class="table-head">Drop Off</th>
+            <th class="table-head">Taxi Type</th>
         </tr>
        
         
@@ -81,9 +66,12 @@
             </tr>
         </c:forEach>
     </table>
-    <form action="backToDashBoard" method="post">
-        <input type="submit" class="button" value="Go Back To Dash Board">
+    <form action="backToDashBoard" method="get">
+    <div class="text-center">
+            <button type="submit" class="btn btn-success">Go Back To Dash Board</button>
+          </div>
     </form>
+    </div>
 </body>
 
 </html>

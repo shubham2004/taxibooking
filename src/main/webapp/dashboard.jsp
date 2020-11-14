@@ -44,8 +44,8 @@
 		color: #82f090;
 		text-align: center;	
 	}
-	.login-form .button {
-		    margin-top: 150px;
+	.button {
+		    margin: 50px;
 			height: 100px;
 			width:250px;
 			background-color:#0ae227;
@@ -56,30 +56,12 @@
 			
 		
 	}
-	.login-form .button:hover{
+	.button:hover{
 		background-color:#82f090;
 	}
-	.left{
-		position:fixed;
-		height: 50%;
-		width: 33%;
-		top:200px;
-		left:300px;
-	}
-	.middle{
-		position:fixed;
-		top:200px;
-		height: 50%;
-		width: 33%;
-		left: 680px;
-	}
-	.right{
-		position:fixed;
-		top:200px;
-		height: 50%;
-		width: 33%;
-		left:1050px;
-		
+	.center {
+	display: table;
+   margin: 0 auto
 	}
 
 </style>
@@ -95,31 +77,17 @@
         <a href="#gallery">GALLERY</a>
         <a href="#testimonials">TESTIMONIALS</a>
         <a href="#contact">CONTACT</a>
-
     </div>
     
-<h1>Welcome ${passanger}</h1>
-<br>
-<div class="left">
-	<div class="centered">
-		<form class="login-form" action="bookingHistory" method="Get">
-			<input type="submit" class="button" value="Check Booking History">
-		</form>
-	</div>	
-</div>	
-<div class="middle">
-	<div class="centered">
-		<form class="login-form" action="newBooking" method="post">
-			<input type="submit" class="button" value="Book new Cab">
-		</form>
+	<h1>Welcome ${passanger}</h1>
+	<br>
+	<div class ="center">
+		<div class="btn-group btn-group-justified">
+  			<a href="/bookingHistory"><button type="button" class="button">Check Booking History</button></a>
+  			<a href="/newBooking"><button type="button" class="button">Book new Cab</button></a>
+  			<a href="/bookingHistory"><button type="button" class="button">Update Current Booking</button></a>
+		</div>
 	</div>
-</div>
-<div class="right">
-	<div class="centered">		
-		<form class="login-form" action="logincust" method="post">
-			<input type="submit" class="button" value="Update Current Booking">					
-		</form>
-	</div>
-</div>		
+		
 </body>
 </html>

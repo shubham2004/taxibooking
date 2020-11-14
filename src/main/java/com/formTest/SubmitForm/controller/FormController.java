@@ -129,7 +129,7 @@ public class FormController {
 		
 	}
 	
-	@PostMapping("newBooking")
+	@GetMapping("newBooking")
 	public String addNewBooking(HttpServletRequest req)
 	{
 		HttpSession session=req.getSession();
@@ -183,7 +183,7 @@ public class FormController {
 		return "result.jsp";
 	}
 	
-	@PostMapping("backToDashBoard")
+	@GetMapping("backToDashBoard")
 	public String backToDashBoard(HttpServletRequest req)
 	{
 		HttpSession session=req.getSession();
