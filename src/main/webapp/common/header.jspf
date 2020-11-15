@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<html lang="en">
+<head>
+<link rel="icon" href="https://st.depositphotos.com/1005920/1832/i/950/depositphotos_18322691-stock-photo-taxi-green-glossy-icon-on.jpg">
+  <meta charset="ISO-8859-1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+<title>Green Cabs</title>

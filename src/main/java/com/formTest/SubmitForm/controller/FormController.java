@@ -41,7 +41,6 @@ public class FormController {
 	@RequestMapping("/")
 	public String home(HttpServletRequest req)
 	{
-		System.out.println("Home page is requested");
 		HttpSession session=req.getSession();
 		session.setAttribute("msg","");
 		
@@ -71,7 +70,6 @@ public class FormController {
 		passangers.setEmail(req.getParameter("email"));
 		passangers.setPassangerId(passangerId);
 		passangers.setPassword(req.getParameter("pass"));
-		System.out.println(passangers);
 		try {
 			if(passangerService.getPassangerDetails(passangers.getEmail())!=null)
 			{
