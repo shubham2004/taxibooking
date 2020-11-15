@@ -49,7 +49,7 @@
 				<div class="btn-group btn-group-justified">
   					<a href="/bookingHistory"><button type="button" class="button">Check Booking History</button></a>
   					<a href="/newBooking"><button type="button" class="button">Book new Cab</button></a>
-  					<a href="/bookingHistory"><button type="button" class="button">Update Current Booking</button></a>
+  					<a href="/updateBooking"><button type="button" class="button">Update Current Booking</button></a>
 				</div>
 			</div>
 		</div>	

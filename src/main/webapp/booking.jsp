@@ -12,7 +12,7 @@
     }
     h1{
         text-align: center;
-        color:rgb(0, 0, 0) ;
+        color: #82f090;
     }
     
     .myForm {
@@ -88,6 +88,7 @@
         background-color: rgb(200, 245, 220);
         
     }
+   
     
 </style>
 

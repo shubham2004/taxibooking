@@ -38,24 +38,17 @@
             <th class="table-head">Pickup Place</th>
             <th class="table-head">Drop Off</th>
             <th class="table-head">Taxi Type</th>
+            <th class="table-head">Action</th>
         </tr>
        
         
         <c:forEach items="${lists}" var="booking">
             <tr>
-
-                <td>
-                    <c:out value="${booking.pickupDate}" />
-                </td>
-                <td>
-                    <c:out value="${booking.pickupPlace}" />
-                </td>
-                <td>
-                    <c:out value="${booking.dropOff}" />
-                </td>
-                <td>
-                    <c:out value="${booking.taxi}" />
-                </td>
+                <td><c:out value="${booking.pickupDate}" /></td>
+                <td><c:out value="${booking.pickupPlace}" /></td>
+                <td><c:out value="${booking.dropOff}" /></td>
+                <td><c:out value="${booking.taxi}" /></td>
+				<td><a type="button" class="btn btn-success" href="/updateBooking?id=${booking.bookingId}">Update</a></td>
             </tr>
         </c:forEach>
     </table>

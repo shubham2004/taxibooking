@@ -201,4 +201,19 @@ public class FormController {
         return model;
 	}
 	
+	@GetMapping("updateBooking")
+	public ModelAndView showUpdateBooking()
+	{
+		ArrayList<Booking> list = bookingService.getAllBooking();
+        ModelAndView model = new ModelAndView("updateBooking.jsp");
+        model.addObject("lists", list);
+        return model;
+	}
+	
+	@PostMapping("updateBooking")
+	public String updateBooking()
+	{
+		return "updateBooking.jsp";
+	}
+	
 }

@@ -9,14 +9,11 @@
 .navbar {
   min-height: 50px;
   font-size: 25px;
-}
-.navbar-header{
- font-size: 25px;
-}
+  }
 </style>
 </head>
 	<body>
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar fixed-top navbar-inverse">
   			<div class="container-fluid">
     			<div class="navbar-header">
       				<a class="navbar-brand" href="/backToDashBoard">Green Cabs</a>

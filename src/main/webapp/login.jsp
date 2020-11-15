@@ -27,7 +27,13 @@
     </script>
 <style type="text/css">
         @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
-
+body{
+          background-image:linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.7)),url("background\(dashboard\).png");
+		background-position: center center;
+  		background-repeat: no-repeat;
+  		background-attachment: fixed;
+  		background-size: cover;
+        }
 * {
 margin: 0;
 padding: 0;
